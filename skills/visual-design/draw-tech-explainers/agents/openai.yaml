@@ -1,0 +1,13 @@
+interface:
+  display_name: 蓝紫科技卡片说明图
+  short_description: 复用深色标题、浅蓝卡片与蓝紫渐变，制作清晰的科技简报、产品全景和架构说明图
+  default_prompt: 使用 $draw-tech-explainers，将我的内容制作成蓝紫科技卡片风格的说明图。
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

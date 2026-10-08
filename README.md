@@ -7,6 +7,7 @@
 | 分类 | Skill | 中文名称 | 用途 | 关键词 |
 | --- | --- | --- | --- | --- |
 | [视觉设计](skills/visual-design/) | [draw-cozy-explainers](skills/visual-design/draw-cozy-explainers/SKILL.md) | 暖纸手绘说明图 | 制作中文科普、流程、对比和结构说明图；支持成图、提示词、版式方案及可编辑文件 | 暖纸、手绘、手账、信息图、粉蓝配色 |
+| [视觉设计](skills/visual-design/) | [draw-tech-explainers](skills/visual-design/draw-tech-explainers/SKILL.md) | 蓝紫科技卡片说明图 | 制作科技简报、发布会摘要、产品全景、架构、流程和方案对比图；支持成图、提示词、版式方案及可编辑 SVG/HTML/PDF | 科技风、蓝紫渐变、信息卡片、架构图、发布摘要 |
 
 ## 目录结构
 
@@ -16,7 +17,12 @@ asia-skill/
 ├── AGENTS.md                         # 仓库维护约定
 └── skills/
     └── visual-design/                # 视觉设计
-        └── draw-cozy-explainers/
+        ├── draw-cozy-explainers/
+        │   ├── SKILL.md              # 技能入口
+        │   ├── agents/openai.yaml    # 展示与调用配置
+        │   ├── assets/               # 图标与风格参考图
+        │   └── references/           # 风格规范与提示词参考
+        └── draw-tech-explainers/
             ├── SKILL.md              # 技能入口
             ├── agents/openai.yaml    # 展示与调用配置
             ├── assets/               # 图标与风格参考图
@@ -27,7 +33,9 @@ asia-skill/
 
 ## 使用示例
 
-在支持 skill 的工具中导入完整的 `draw-cozy-explainers/` 目录，保留其中的参考文档和素材，然后调用：
+在支持 skill 的工具中导入所需 skill 的完整目录，保留其中的参考文档和素材，然后调用。
+
+### 暖纸手绘说明图
 
 ```text
 使用 $draw-cozy-explainers，把下面的内容制作成暖纸手绘风格的中文说明图。
@@ -38,6 +46,18 @@ asia-skill/
 ```
 
 查看 [风格参考图](skills/visual-design/draw-cozy-explainers/assets/style-reference.png)、[风格规范](skills/visual-design/draw-cozy-explainers/references/style-guide.md) 和 [构图与提示词](skills/visual-design/draw-cozy-explainers/references/prompt-patterns.md)。
+
+### 蓝紫科技卡片说明图
+
+```text
+使用 $draw-tech-explainers，将这份发布会笔记做成竖版科技摘要长图，只使用笔记里的信息。
+```
+
+```text
+使用 $draw-tech-explainers，解释 agent、loop、harness 的关系，只给提示词。
+```
+
+查看 [风格参考图](skills/visual-design/draw-tech-explainers/assets/style-reference.png)、[视觉规范](skills/visual-design/draw-tech-explainers/references/style-guide.md) 和 [构图与提示词](skills/visual-design/draw-tech-explainers/references/prompt-patterns.md)。
 
 ## 维护约定
 
