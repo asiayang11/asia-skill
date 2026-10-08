@@ -1,0 +1,13 @@
+interface:
+  display_name: 暖纸手绘说明图
+  short_description: 复用暖纸、手绘线条与低饱和配色，制作清晰的中文科普、流程与对比说明图
+  default_prompt: 使用 $draw-cozy-explainers，把我的主题制作成暖纸手绘风格的说明图。
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true
